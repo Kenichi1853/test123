@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        // PhoneGap event handler
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady() {
+            console.log("PhoneGap is ready");
+        }
+        /*
+        window.onload = function () {
+            var eButton1 = document.getElementById("hoge1");
+            eButton1.addEventListener("click", function() {
+                console.log("aaaabbbbccccc");
+            },false);
+        }*/
+        $(function(){
+            $("#hoge1").on("click", function() {
+                console.log("hogehogehogehoge!");
+            });
+        });
+        
+    </script>
+</head>
+<body>
+
+    <h1>Welcome to Monaca!</h1>
+    <table>
+        <tr>
+        <th>商品</th>
+        <th>値段</th>
+        </tr>
+        <tr>
+            <td>りんご</td>
+            <td>100円</td>
+        </tr>
+    </table>
+    <a class="button--large" href="phonegap-demo.html">Start Demo</a>
+    
+    <button id="hoge1">Start Demoaaaa</button>
+
+</body>
+</html>
